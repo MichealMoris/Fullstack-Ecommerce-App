@@ -1,0 +1,679 @@
+@font-face {
+    font-family: 'CerebriSans';
+    src: url('../resources/fonts/Cerebri-Sans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CerebriSansBold';
+    src: url('../resources/fonts/Cerebri-Sans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: 'CerebriSans', sans-serif;
+    user-select: none;
+}
+
+.star-rating {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.star-color {
+    color: #fb0;
+}
+
+.p-card-img {
+    transition: transform .5s;
+}
+
+.p-card-img:hover {
+    transform: scale(1.12);
+}
+
+.Progress-Bar-Container {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.Progress-Bar {
+    height: 5px;
+    background-color: #333;
+    border-radius: 50px;
+}
+
+.product-price {
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.74;
+    color: #444;
+}
+
+.color-border {
+    border: 1px solid lightgrey;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.color-picker:hover {
+    cursor: pointer;
+}
+
+.product-options:hover {
+    color: #e52e06;
+    cursor: pointer;
+}
+
+.product-options {
+    transition: color 0.3s ease;
+}
+
+.product-buttons {
+    transition: background 0.3s ease !important;
+    font-family: 'CerebriSansBold' !important;
+}
+
+.product-buttons:hover {
+    background-color: #e52e06 !important;
+    border-color: #e52e06 !important;
+}
+
+.product-button-two {
+    transition: background 0.3s ease !important;
+    font-family: 'CerebriSansBold' !important;
+    background-color: #e52e06 !important;
+    border-color: #e52e06 !important;
+    margin-top: 20px;
+}
+
+.product-button-two:hover {
+    background-color: #212529 !important;
+    border-color: #212529 !important;
+}
+
+.product-images-card {
+    cursor: pointer;
+    transition: border 0.3s ease !important;
+}
+
+.product-images-card:hover {
+    border: 1px solid #e52e06 !important;
+}
+
+#active-product-card {
+    border: 1px solid #e52e06 !important;
+}
+
+.main-logo {
+    width: 150px;
+}
+
+.icons a {
+    color: #333;
+    transition: 0.3s;
+}
+
+.icons a:hover {
+    color: orangered;
+}
+
+.icons i {
+    margin: 10px;
+    font-size: 25px;
+}
+
+.navbar-links li a {
+    color: #131212;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar-links li a:hover {
+    color: orangered;
+}
+
+.login-signup a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.dropdown-menu li a {
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.lending-container {
+    height: 90vh;
+    background-image: url("https://drou-electronics-store.myshopify.com/cdn/shop/files/x2.jpg?v=1674276678");
+    background-size: cover;
+    background-position: center;
+}
+
+.lending-texts h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: orangered;
+}
+
+.lending-texts {
+    line-height: 30px;
+}
+
+.lending-texts h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.lending-texts p {
+    color: #333;
+    text-transform: capitalize;
+}
+
+.lending-texts button {
+    background-color: orangered;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 130px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+
+}
+
+.lending-texts button:hover {
+    background-color: #333;
+}
+
+.electronics-row a {
+    text-decoration: none;
+    display: block;
+    text-transform: capitalize;
+}
+
+.my-badge {
+    position: absolute;
+    background-color: #ff4500;
+    font-size: 10px;
+    color: white;
+    top: 55%;
+    left: 70%;
+    padding: 5px;
+    text-align: center;
+}
+
+.lending-container2 {
+    height: 90vh;
+    background-image: url("https://drou-electronics-store.myshopify.com/cdn/shop/files/x1.jpg?v=1674276678");
+    background-size: cover;
+    background-position: center;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-info-list {
+    padding: 0;
+    margin: 0;
+}
+
+.image1 {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+}
+
+.text {
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+}
+
+.icons {
+    background-color: #f8f8f8;
+}
+
+.footer-info-list li a {
+    color: #444444;
+    text-decoration: none;
+}
+
+.footer-info-list li span {
+    color: #444444;
+}
+
+.div_btn button {
+    background-color: orangered;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 130px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+
+}
+
+.div_btn button:hover {
+    background-color: #333;
+}
+
+.text h3 {
+    color: orangered;
+}
+
+.discount {
+    width: 100%;
+    height: 55vh;
+    background-image: url("https://drou-electronics-store.myshopify.com/cdn/shop/files/slide61.jpg?v=1674276677");
+    background-size: contain;
+}
+
+/*Mariem*/
+#limited-time-offer-section {
+
+
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+    display: block;
+    text-align: center;
+
+    display: flex;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    margin-top: 0;
+    background-image: url(https://drou-electronics-store.myshopify.com/cdn/shop/files/main-banner-01.jpg?v=1674276678);
+    background-size: cover;
+}
+
+.row {
+
+    margin-right: -200px;
+    margin-left: -200px;
+    flex-direction: row-reverse;
+}
+
+.custom-container {
+
+    max-width: 1450px;
+    width: 100%;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.discount-announcement h5 {
+    margin-top: 0;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    background: #e52e06;
+    display: inline-block;
+    padding: 14px 27px;
+}
+
+.discount-announcement h4 {
+
+    color: #333;
+    line-height: 60px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: capitalize;
+    box-sizing: border-box;
+
+
+}
+
+.discount-announcement h6 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 39px;
+    text-transform: none;
+    text-transform: capitalize;
+}
+
+.countdown-item-timer {
+    display: inline;
+
+}
+
+.countdown-item {
+
+    font-size: 21px;
+
+    background: transparent;
+    text-transform: capitalize;
+    box-shadow: 0 0 10px #0000001a;
+    height: 80px;
+    width: 80px;
+    border-radius: 16px;
+
+    padding-top: 17px;
+    font-weight: 600;
+    display: inline-block;
+    border: 0px solid #e52e06;
+
+    margin: 0 10px;
+
+
+    margin-top: 42px;
+    margin-bottom: 22px;
+}
+
+.countdown-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "CerebriSans";
+    text-align: center;
+}
+
+.call-to-action {
+    box-sizing: border-box;
+    margin-top: 100px;
+    margin-top: 0px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 21px;
+    text-transform: capitalize;
+
+    text-align: center;
+    color: #333;
+
+}
+
+.call-to-action:hover {
+    color: tomato;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#add {
+    color: white;
+}
+
+#delete {
+    font-size: 1.3em;
+    border-color: #272829;
+    color: white;
+    border-width: 3px;
+    border-radius: 100%;
+}
+
+#img table,
+tr,
+td {
+
+    margin-left: 10em;
+    border: 1px solid rgb(146, 146, 146);
+    text-align: center;
+    width: 12.6em;
+    padding: 1.6rem;
+
+}
+
+#return_home {
+    font-size: 0.9em;
+    color: rgb(158, 158, 158);
+    text-decoration: none;
+}
+
+/* #return_home::after{
+    content :"   /  ";
+} */
+#slash {
+    color: rgb(163, 163, 163);
+    margin: 0, 2, 0, 2;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#header_text {
+    color: rgb(249, 82, 45);
+    font-size: 0.9em;
+}
+
+#cart_header {
+    margin-bottom: 12em;
+    padding: 3rem;
+
+    background-color: rgb(30, 33, 34);
+}
+
+.carousel-cover {
+    width: 60px;
+    margin-bottom: 35%;
+    margin-left: -100px;
+    text-align: center;
+    height: 60px;
+
+    padding: 5px;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(5, 4, 4, 0.1);
+
+}
+
+.carousel-cover2 {
+    margin-right: -100px;
+    width: 60px;
+    margin-bottom: 35%;
+    text-align: center;
+    height: 60px;
+    padding: 5px;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(5, 4, 4, 0.1);
+
+
+}
+
+.carousel-cover2 span {
+    margin-top: 20%;
+}
+
+.carousel-cover span {
+    margin-top: 20%;
+
+
+}
+
+.price_text {
+    color: #e52e06;
+}
+
+.rate span i {
+    color: orange;
+
+
+}
+
+.card1 {
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    padding: 5px 10px 30px 10px;
+
+
+}
+
+.card-img-top {
+    position: relative;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    right: 10%;
+    opacity: 1;
+
+
+}
+
+.row2 {
+    height: 350px;
+    padding-top: 130px;
+
+    margin-Bottom: 90px;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+}
+
+.selected {
+    color: #e52e06;
+
+}
+
+.links:hover {
+    color: #e52e06;
+}
+
+.description a {
+
+
+    background-color: gray;
+    padding: 7px;
+    width: 80px;
+    height: 80px;
+    margin-left: 9px;
+    border-radius: 50%;
+    opacity: 0;
+    text-decoration: none;
+    transform: translateY(30px);
+
+
+
+
+
+
+
+}
+
+.card1:hover img {
+    transform: scale(0.9) translateY(-20px);
+    opacity: 0.3;
+
+}
+
+.card1:hover .description a {
+    opacity: 1;
+}
+
+.description a:hover {
+    background-color: #e52e06;
+
+}
+
+.product_img1:hover .description span {
+    opacity: 1;
+
+
+
+}
+
+.register-btn {
+    background-color: #e52e06 !important;
+    padding: 13px 30px 12px !important;
+    border-radius: 26px !important;
+    font-size: 12px !important;
+    font-family: "CerebriSansBold", sans-serif !important;
+    transition: all .3s ease !important;
+}
+
+.register-btn:hover {
+    background-color: #212529 !important;
+    border-color: #212529 !important;
+}
+
+.form-dialog {
+    width: 570px !important;
+    margin: auto;
+    padding: 30px 30px 20px;
+    box-shadow: 2px 2px 11px #0000001a;
+}
+
+.login-inputs {
+    width: 270px !important;
+    background-color: #ebebeb;
+    border: 1px solid #ebebeb;
+    padding: .375rem .75rem;
+    color: #495057;
+    font-size: 13px;
+}
+
+.custom-text{
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.custom-text:hover{
+    color: #e52e06;
+}
+
+table {
+    border-collapse: collapse;
+ }
+ table tr th{
+    border: 1px solid lightgrey;
+    padding: 15px;
+ }
+ table tr td{
+    border: 1px solid lightgrey;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+ }
+
+.fa-times{
+    font-size: 20px;
+    color: lightgray;
+    border: 2px solid lightgray;
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    transition: all .3s ease;
+ }
+
+ .fa-times:hover{
+    color: #e52e06;
+    border-color: #e52e06;
+ }
