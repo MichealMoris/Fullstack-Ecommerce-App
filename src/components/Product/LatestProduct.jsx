@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import { Link } from "react-router-dom";
 
 
 export default function LatestProduct() {
@@ -11,17 +12,16 @@ export default function LatestProduct() {
         { id: 5, title: "DrouPods max", image: "https://drou-electronics-store.myshopify.com/cdn/shop/products/p2_large.jpg?v=1674275320", oldprice: 346, newprice: 78768, rate: 3 }
     ]
     return (
-        <div className="container-fluid">
+        <div className="container-fluid p-5">
             <div className="title row justify-content-evenly align-items-center">
 
-            <div className=" col-2 mt-2 mb-5 links">
-                    <a to="" >All Product <i class="bi bi-arrow-right"></i></a>
-
+                <div className=" col-2 mt-2 mb-5 links">
+                    <Link to="/allproducts" style={{textDecoration: 'none', color:'black', fontWeight:'bold'}}>View All Product <i class="bi bi-arrow-right"></i></Link>
                 </div>
                 <div className="col-10">
-                    <h2 className="mt-2 mb-5 ">Lastest Product</h2>
+                    <h2 className="mt-2 mb-5 ">Latest Product</h2>
                 </div>
-                
+
 
             </div>
             <div className="container-fluid">
@@ -69,16 +69,16 @@ export default function LatestProduct() {
                         </div>
                     </div>
                     <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                       <div className="carousel-cover ">
+                        <div className="carousel-cover ">
 
-                        <span class="carousel-control-prev-icon"aria-hidden="true" ></span>
-                        </div> 
-                        
+                            <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+                        </div>
+
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <div className="carousel-cover2">
-                        <span class="carousel-control-next-icon  rounded-pill  " aria-hidden="true"></span>
-                    </div>
+                        <div className="carousel-cover2">
+                            <span class="carousel-control-next-icon  rounded-pill  " aria-hidden="true"></span>
+                        </div>
                     </button>
                 </div>
 

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
     return (
-        <div className="container-fluid">
-            <div className="row align-content-center p-5" style={{ height: 10 + "vh", background: "#f4f4f4" }}>
+        <div className="container">
+            <div className="row align-content-center" style={{ height: 10 + "vh", background: "#f4f4f4" }}>
                 <div className="col">
                     <Link to="/" style={{color: "#666", textDecoration: "none"}}>Home</Link>
                     <span className="ms-3 me-3">/</span>

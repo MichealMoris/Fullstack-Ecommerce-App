@@ -11,15 +11,15 @@ export default function PopularProduct() {
         { id: 5, title: "DrouPods max", image: "https://drou-electronics-store.myshopify.com/cdn/shop/products/p2_large.jpg?v=1674275320", oldprice: 346, newprice: 78768, rate: 5 },
         { id: 6, title: "DrouPods max", image: "https://drou-electronics-store.myshopify.com/cdn/shop/products/p5_020e3c58-9f57-4388-b8d8-bb40db3b4c5e_large.jpg?v=1674275306", oldprice: 346, newprice: 78768, rate: 3 },
         { id: 7, title: "DrouPods max", image: "https://drou-electronics-store.myshopify.com/cdn/shop/products/12_1024x1024_crop_center.jpg?v=1674275341", oldprice: 346, newprice: 78768, rate: 4 },
-        { id: 8, title: "DrouPods max", image: "https://drou-electronics-store.myshopify.com/cdn/shop/products/p3_0dd10fdb-44b3-415b-b7c3-91896ecb3ee2_large.jpg?v=1674275302", oldprice: 346, newprice: 78768, rate:1 }
+        { id: 8, title: "DrouPods max", image: "https://drou-electronics-store.myshopify.com/cdn/shop/products/p3_0dd10fdb-44b3-415b-b7c3-91896ecb3ee2_large.jpg?v=1674275302", oldprice: 346, newprice: 78768, rate: 1 }
     ];
     return (
 
-        <div className="container-fluid " style={{ marginTop: "40px",marginBottom:"90px" }}>
-           
+        <div className="container-fluid p-5 ">
+
             <div className="title row justify-content-between align-items-center ">
 
-            <div className=" col-1 col-md-2 col-lg-3  mt-2 mb-5 ms-5">
+                <div className=" col-1 col-md-2 col-lg-3  mt-2 mb-5 ms-5">
                     <a className="links selected">Acesories </a>
                     <a className="links">iphone </a>
                     <a className="links">Laptop </a>
@@ -28,7 +28,7 @@ export default function PopularProduct() {
                 <div className="col-7">
                     <h2 className="mt-2 mb-5 ">Popular Product</h2>
                 </div>
-                
+
 
             </div>
             <div className="container-fluid">

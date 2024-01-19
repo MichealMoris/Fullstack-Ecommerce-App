@@ -5,9 +5,12 @@ import Home from './components/Home';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import Cart from './components/Cart/Cart';
+import AllProducts from './components/Product/AllProducts';
+import About from './components/About/About';
+import ContactData from './components/Contact/ContactData'
 function App() {
   return (
-    <div>
+    <div className="container-fluid app-container">
       <Navbar />
       <Routes>
         <Route path='/' element={Home()} />
@@ -16,6 +19,9 @@ function App() {
           <Route path='register' element={Register()}/>
         </Route>
         <Route path='/cart' element={Cart()} />
+        <Route path='/allproducts' element={AllProducts()} />
+        <Route path='/about' element={About()} />
+        <Route path='/contact' element={ContactData()} />
       </Routes>
       <Footer />
     </div>

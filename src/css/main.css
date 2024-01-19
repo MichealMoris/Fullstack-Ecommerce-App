@@ -17,6 +17,10 @@
     user-select: none;
 }
 
+.app-container {
+    background-color: #F9F9F9;
+}
+
 .star-rating {
     font-size: 24px;
     cursor: pointer;
@@ -224,13 +228,8 @@
     background-position: center;
 }
 
-ul {
-    list-style: outside none none;
-    margin: 0px;
-    padding: 0px;
-}
-
 .footer-info-list {
+    list-style: outside none none;
     padding: 0;
     margin: 0;
 }
@@ -291,11 +290,7 @@ ul {
     background-size: contain;
 }
 
-/*Mariem*/
 #limited-time-offer-section {
-
-
-
     flex-direction: column;
     flex-wrap: nowrap;
     display: block;
@@ -513,8 +508,6 @@ td {
 
 .rate span i {
     color: orange;
-
-
 }
 
 .card1 {
@@ -637,7 +630,7 @@ td {
     font-size: 13px;
 }
 
-.custom-text{
+.custom-text {
     cursor: pointer;
     color: #333;
     font-size: 14px;
@@ -645,25 +638,27 @@ td {
     text-decoration: none;
 }
 
-.custom-text:hover{
+.custom-text:hover {
     color: #e52e06;
 }
 
 table {
     border-collapse: collapse;
- }
- table tr th{
+}
+
+table tr th {
     border: 1px solid lightgrey;
     padding: 15px;
- }
- table tr td{
+}
+
+table tr td {
     border: 1px solid lightgrey;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 25px;
- }
+}
 
-.fa-times{
+.fa-times {
     font-size: 20px;
     color: lightgray;
     border: 2px solid lightgray;
@@ -671,9 +666,62 @@ table {
     border-radius: 50%;
     width: 45px;
     transition: all .3s ease;
- }
+}
 
- .fa-times:hover{
+.fa-times:hover {
     color: #e52e06;
     border-color: #e52e06;
- }
+}
+
+/* new code */
+.content span i {
+    color: orangered;
+    font-size: 60px;
+}
+
+.content h5 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.content ul li {
+    margin-left: -10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.content {
+    padding: 30px;
+    border: 1px whitesmoke solid;
+    border-radius: 7px;
+    transition: 0.4s ease;
+}
+
+.content:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.submit {
+    background-color: orangered;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 130px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.form-login {
+    padding: 30px;
+    border: 1px whitesmoke solid;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-login input {
+    border-radius: 10px;
+}

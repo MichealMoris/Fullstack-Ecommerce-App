@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Categories() {
     return (
@@ -7,32 +8,32 @@ export default function Categories() {
                 <div className="row electronics-row">
                     <div className='col-4'>
                         <h5>Smart Phone</h5>
-                        <br/>
-                        <a href='test'>Smart Watch</a>
-                        <a href='test'>Computer</a>
-                        <a href='test'>Airpods Pro</a>
-                        <a href='test'>LCD Screen</a>
-                        <a href='test'>LED Screen</a>
+                        <br />
+                        <Link to='test'>Smart Watch</Link>
+                        <Link to='test'>Computer</Link>
+                        <Link to='test'>Airpods Pro</Link>
+                        <Link to='test'>LCD Screen</Link>
+                        <Link to='test'>LED Screen</Link>
                     </div>
 
                     <div className='col-4'>
                         <h5>Headphones</h5>
-                        <br/>
-                        <a href='test'>Airpods</a>
-                        <a href='test'>Iphone</a>
-                        <a href='test'>Windows Phones</a>
-                        <a href='test'>Nokia Phone</a>
-                        <a href='test'>Android</a>
+                        <br />
+                        <Link to='test'>Airpods</Link>
+                        <Link to='test'>Iphone</Link>
+                        <Link to='test'>Windows Phones</Link>
+                        <Link to='test'>Nokia Phone</Link>
+                        <Link to='test'>Android</Link>
                     </div>
 
                     <div className='col-4'>
                         <h5>Apple MacBook</h5>
-                        <br/>
-                        <a href='test'>Laptop</a>
-                        <a href='test'>Mac Book Pro</a>
-                        <a href='test'>Speaker</a>
-                        <a href='test'>Wired Earbuds</a>
-                        <a href='test'>Tablet</a>
+                        <br />
+                        <Link to='test'>Laptop</Link>
+                        <Link to='test'>Mac Book Pro</Link>
+                        <Link to='test'>Speaker</Link>
+                        <Link to='test'>Wired Earbuds</Link>
+                        <Link to='test'>Tablet</Link>
                     </div>
                 </div>
             </div>

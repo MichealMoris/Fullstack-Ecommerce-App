@@ -7,8 +7,8 @@ export default function Navbar() {
     return (
         <div>
             <div className="container-fluid">
-                <nav className="navbar navbar-expand-lg p-3 bg-body-tertiary">
-                    <div className="container">
+                <nav className="navbar navbar-expand-lg p-3 bg-body-tertiary ">
+                    <div className="container-fluid">
                         <img src={logo} alt="Main Logo" className='main-logo' />
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@ export default function Navbar() {
                         <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                             <ul className="navbar-nav navbar-links">
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="test">HOME</a>
+                                    <Link className="nav-link" aria-current="page" to="/">HOME</Link>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="test" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -26,40 +26,33 @@ export default function Navbar() {
                                         <Categories />
                                     </ul>
                                 </li>
-                                <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="test" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        BLOG
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="test">Blog Listing</a></li>
-                                        <li><a className="dropdown-item" href="test">Blog Post</a></li>
-                                    </ul>
-                                </li>
 
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="test" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         PAGES
                                     </a>
                                     <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="test">About Page</a></li>
-                                        <li><a className="dropdown-item" href="test">Contact Page</a></li>
-                                        <li><a className="dropdown-item" href="test">FAQ Page</a></li>
-                                        <li><a className="dropdown-item" href="test">Privacy Policy Page</a></li>
-                                        <li><a className="dropdown-item" href="test">404 Error Pages</a></li>
+                                        <li><Link className="dropdown-item" to="/about">About Page</Link></li>
+                                        <li><Link className="dropdown-item" to="/contact">Contact Page</Link></li>
                                     </ul>
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="test">CONTACT</a>
+                                    <Link className="nav-link" aria-current="page" to="/contact">CONTACT</Link>
                                 </li>
                             </ul>
                         </div>
                         <div className='icons'>
-                            <a href='test'><i className="far fa-search"></i></a>
-                            <a href='test'><i className="far fa-heart"></i></a>
+                            <a href='test'>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                            <Link to='/favorites'>
+                                <i className="far fa-heart"></i>
+                            </Link>
+
                             <Link to='/cart'>
-                                <i className="far fa-shopping-bag position-relative">
-                                    <span className='my-badge rounded-pill'>0</span>
+                                <i class="fa-solid fa-cart-shopping position-relative">
+                                    <span className='my-badge rounded-pill'>1</span>
                                 </i>
                             </Link>
                         </div>
