@@ -52,7 +52,7 @@ export default function Navbar() {
 
                             <Link to='/cart'>
                                 <i class="fa-solid fa-cart-shopping position-relative">
-                                    <span className='my-badge rounded-pill'>1</span>
+                                    <span className='my-badge rounded-pill'>0</span>
                                 </i>
                             </Link>
                         </div>
