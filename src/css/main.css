@@ -512,10 +512,12 @@ td {
 
 .card1 {
 
+    width: 200px !important;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 0px;
+    border-radius: 0px !important;
+    border: none !important;
     padding: 5px 10px 30px 10px;
-
+    background-color: white;
 
 }
 
@@ -546,15 +548,18 @@ td {
     text-decoration: none;
     color: black;
     padding: 12px;
+    cursor: pointer;
 }
 
 .selected {
     color: #e52e06;
+    cursor: pointer;
 
 }
 
 .links:hover {
     color: #e52e06;
+    cursor: pointer;
 }
 
 .description a {
@@ -576,6 +581,10 @@ td {
 
 
 
+}
+
+.card1:hover img{
+    transition: all .3s ease;
 }
 
 .card1:hover img {
@@ -724,4 +733,16 @@ table tr td {
 
 .form-login input {
     border-radius: 10px;
+}
+
+.custom-text2{
+    transition: all .3s ease;
+    text-decoration: none;
+    color: #333;
+    transition: all .3s ease;
+    font-family: "CerebriSansBold";
+}
+
+.custom-text2:hover{
+    color: #e52e06;
 }
