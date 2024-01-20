@@ -515,7 +515,7 @@ td {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0px;
     padding: 5px 10px 30px 10px;
-
+    background-color: white;
 
 }
 
@@ -576,6 +576,10 @@ td {
 
 
 
+}
+
+.card1:hover img{
+    transition: all .3s ease;
 }
 
 .card1:hover img {
