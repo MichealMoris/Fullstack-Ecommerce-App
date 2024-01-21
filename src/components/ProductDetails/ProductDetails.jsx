@@ -7,19 +7,31 @@ import axios from "axios";
 import SoldOut from "./SoldOut";
 import AddToCart from "./AddToCart";
 import { Link } from "react-router-dom";
+import SizePicker from "./SizePicker";
 
-export default function ProductDetails() {
+export default function ProductDetails({onRefresh}) {
     const [product, setProduct] = useState([]);
+    const [size, setSize] = useState("S")
+    const [message, setMessage] = useState(false);
+    const sizes = ["S", "M", "LG"]
+    const [color, setColor] = useState(0)
+    const colors = ["Red", "Green", "Blue"]
     const { id } = useParams();
     async function fetchData() {
-        const response = await axios.get("http://127.0.0.1:8000/products/" + id);
-        setProduct(response.data);
+        try {
+            const response = await axios.get("http://localhost:8000/products/" + id);
+            const data = response.data["data"][0];
+            setProduct(data);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+        
     }
-
 
     useEffect(() => {
         fetchData();
-    }, [])
+    }, [product])
+    
     return (
         <div className="container-fluid">
             <div className="row align-content-center p-5" style={{ height: 10 + "vh", background: "#f4f4f4" }}>
@@ -55,9 +67,37 @@ export default function ProductDetails() {
                         </p>
                     </div>
                     <p style={{ marginTop: 15 + "px", marginBottom: 15 + "px" }} className="desc">{product.product_description}</p>
-                    <div className="d-flex align-items-center" style={{ marginTop: 35 + "px", marginBottom: 35 + "px" }}>
+                    <div className="d-flex align-items-center" style={{ marginTop: 35 + "px" }}>
+                        <span className="me-3" style={{ fontSize: 15 + "px" }}>Size: </span>
+                        <div className="d-flex align-items-center">
+                            {
+                                sizes.map((mSize, index) => {
+                                    return (
+                                        <div className={size == mSize ? "me-1 selected-size-picker" : "size-picker me-1"} onClick={() => { setSize(mSize) }}>
+                                            <div key={index}>
+                                                {mSize}
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                    <div className="d-flex align-items-center" style={{ marginTop: 25 + "px", marginBottom: 35 + "px" }}>
                         <span className="me-3" style={{ fontSize: 15 + "px" }}>Color: </span>
-                        <ColorPicker />
+                        <div className="d-flex align-items-center">
+                            {
+                                colors.map((mColor, index) => {
+                                    return (
+                                        <div className={color == index ? "color-border me-1 color-picker" : "color-picker me-1"} onClick={() => { setColor(index) }}>
+                                            <div key={index} style={{ backgroundColor: mColor, width: 20 + "px", height: 20 + "px", borderRadius: 50 + "%" }}>
+
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                     <div className="d-flex" style={{ fontSize: 14 + "px", marginBottom: 35 + "px" }}>
                         <div className="product-options">
@@ -74,7 +114,12 @@ export default function ProductDetails() {
                         </div>
                     </div>
                     {
-                        product.product_stock == 0 ? <SoldOut /> : <AddToCart product={product} />
+                        message ? <div class="alert alert-success" role="alert">
+                        Product Added to Cart Successfully!
+                    </div> : null
+                    }
+                    {
+                        product.product_stock == 0 ? <SoldOut /> : <AddToCart product={product} color={colors[color]} size={size} setMessage={() => {setMessage(true)}} onRefresh={() => {onRefresh()}}/>
                     }
                     <div className="mt-2">
                         <img className="me-2" src="https://drou-electronics-store.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/amazon-92e856f82cae5a564cd0f70457f11af4d58fa037cf6e5ab7adf76f6fd3b9cafe.svg" alt="" />
