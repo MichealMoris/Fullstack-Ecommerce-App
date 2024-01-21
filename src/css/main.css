@@ -667,17 +667,17 @@ table tr td {
     padding-left: 25px;
 }
 
-.fa-times {
-    font-size: 20px;
+.bi-x {
+    font-size: 30px;
     color: lightgray;
     border: 2px solid lightgray;
-    padding: 10px;
+    padding:2px 5px;
     border-radius: 50%;
-    width: 45px;
     transition: all .3s ease;
+    cursor: pointer;
 }
 
-.fa-times:hover {
+.bi-x:hover {
     color: #e52e06;
     border-color: #e52e06;
 }
@@ -744,5 +744,35 @@ table tr td {
 }
 
 .custom-text2:hover{
+    color: #e52e06;
+}
+
+.size-picker{
+    width: 40px;
+    padding: 0px 5px;
+    background-color: rgba(211, 211, 211, 0.3);
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.selected-size-picker{
+    width: 40px;
+    padding: 0px 5px;
+    background-color: #e52e06;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-name-custom{
+    text-decoration: none;
+    font-family: "CerebriSansBold";
+    color: #333;
+    transition: all .3s ease;
+}
+
+.product-name-custom:hover{
     color: #e52e06;
 }

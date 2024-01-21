@@ -1,5 +1,6 @@
 import CartItem from './CartItem';
-export default function CartTable() {
+export default function CartTable({cart, onRefresh}) {
+
     return (
         <div className="row align-content-center p-5" style={{ height: "fit-content"}}>
             <div className="col">
@@ -14,14 +15,22 @@ export default function CartTable() {
                         </tr>
                     </thead>
                     <tbody>
-                        <CartItem product={{
-                            image: "https://drou-electronics-store.myshopify.com/cdn/shop/products/p2_ea1ad2a2-ba0d-4dd2-b29a-e51fd931583b_compact.jpg?v=1674275324",
-                            link: "",
-                            name: "Droubook Space gray",
-                            price: 1180.00,
-                            size: "M",
-                            color: "Magenta",
-                        }} />
+                        {
+                            cart.map((item) => {
+                                return <CartItem product={{
+                                    id: item.id,
+                                    image: item.product_image,
+                                    link: "http://localhost:3000/productDetails/" + item.product_id,
+                                    name: item.product_name,
+                                    price: item.product_price,
+                                    size: item.product_size,
+                                    color: item.product_color,
+                                    quantity: item.product_quantity,
+                                    onRefresh: onRefresh
+                                }} />
+                            })
+                        }
+                        
                     </tbody>
                 </table>
             </div>

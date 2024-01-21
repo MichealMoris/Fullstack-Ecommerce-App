@@ -1,9 +1,32 @@
 import React from 'react'
 import Categories from './Categories'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
-export default function Navbar() {
+export default function Navbar({data, setRefreshedData}) {
     const logo = 'https://drou-electronics-store.myshopify.com/cdn/shop/files/logo_300x300.png?v=1674276674'
+    const [cartCount, setCartCount] = useState(0);
+    async function fetchData() {
+        try {
+            const response = await axios.get("http://localhost:8000/cartCount");
+            const data = response.data["data"][0]["COUNT(*)"];
+            setCartCount(data);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+        
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, [cartCount])
+
+    if(data){
+        fetchData();
+        setRefreshedData();
+    }
+
     return (
         <div>
             <div className="container-fluid">
@@ -52,7 +75,7 @@ export default function Navbar() {
 
                             <Link to='/cart'>
                                 <i class="fa-solid fa-cart-shopping position-relative">
-                                    <span className='my-badge rounded-pill'>0</span>
+                                    <span className='my-badge rounded-pill'>{cartCount}</span>
                                 </i>
                             </Link>
                         </div>

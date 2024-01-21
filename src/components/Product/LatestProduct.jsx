@@ -16,14 +16,16 @@ export default function LatestProduct() {
         return product.product_category == "headphones";
     })
     async function fetchData() {
-        const response = await axios.get("http://127.0.0.1:8000/products");
-        setProducts(response.data);
+        try {
+            const response = await axios.get("http://localhost:8000/products");
+            const data = response.data["data"];
+            setProducts(data);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
     }
-
     
-    useEffect(() => {
-        fetchData();
-    }, [])
+    fetchData();
 
     return (
         <div className="container-fluid p-5">
