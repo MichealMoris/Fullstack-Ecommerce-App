@@ -1,0 +1,57 @@
+.card-text p:hover {
+    text-decoration: none;
+    color: #e52e06;
+}
+
+.card-text p {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+
+.facard {
+    width: 23%;
+    /* background-color: aquamarine; */
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 15px;
+    border: 1px solid rgb(218, 218, 218);
+    padding: 10px 0px;
+    position: relative;
+}
+
+.heart {
+
+    background-color: #e52e06;
+    padding-left: 12px;
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
+    margin-left: 0px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+
+    text-decoration: none;
+
+}
+
+.heartnot {
+    padding-left: 12px;
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
+    margin-left: 0px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+
+    text-decoration: none;
+    background-color: grey;
+}
+
+.heart:checked {
+    background-color: grey;
+}

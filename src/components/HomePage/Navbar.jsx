@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <div>
             <div className="container-fluid">
-                <nav className="navbar navbar-expand-lg p-3 bg-body-tertiary ">
+                <nav className="navbar navbar-expand-lg p-3 bg-body-tertiary">
                     <div className="container-fluid">
                         <img src={logo} alt="Main Logo" className='main-logo' />
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
